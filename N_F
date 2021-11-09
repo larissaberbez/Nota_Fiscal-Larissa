@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//Compiler version gcc  6.3.0
+
+int main () {   
+  setlocale(LC_ALL, "Portuguese_Brazil");      
+  
+  char P_1[18], P_2[18], P_3[18], P_4[18];
+  char P_5[18], P_6[18], P_7[18], P_8[18];   
+  float v_p1, v_p2, v_p3, v_p4;   
+  float v_p5, v_p6, v_p7, v_p8;   
+  int qtd_p1, qtd_p2, qtd_p3, qtd_p4, qtd_p5, qtd_p6, qtd_p7, qtd_p8;   
+  int codigo1 = 441, codigo2 = 442, codigo3 = 443, codigo4 = 444;   
+  int codigo5 = 445, codigo6 = 446, codigo7 = 447, codigo8 = 448;      
+  float total;   
+  
+  printf("Criador de Nota Fiscal\n\n");   
+  
+  printf("Nome do Produto: ");   
+  gets(P_1);   
+  printf("Valor do Produto: ");   
+  scanf("%f", &v_p1);   
+  printf("Quantidade do Produto: ");   
+  scanf("%d", &qtd_p1);   
+  fflush(stdin);      
+  
+  printf("\nNome do Produto: ");   
+  gets(P_2);   
+  printf("Valor do Produto: ");   
+  scanf("%f", &v_p2);   
+  printf("Quantidade do Produto: ");   
+  scanf("%d", &qtd_p2);   
+  fflush(stdin);      
+ 
+  printf("\nNome do Produto: ");   
+  gets(P_3);   
+  printf("Valor do Produto: ");   
+  scanf("%f", &v_p3);   
+  printf("Quantidade do Produto: ");   
+  scanf("%d", &qtd_p3);   
+  fflush(stdin);      
+  
+  printf("\nNome do Produto: ");   
+  gets(P_4);   
+  printf("Valor do Produto: ");   
+  scanf("%f", &v_p4);   
+  printf("Quantidade do Produto: ");   
+  scanf("%d", &qtd_p4); 
+  fflush(stdin);      
+  
+  printf("\nNome do Produto: ");   
+  gets(P_5);   
+  printf("Valor do Produto: ");   
+  scanf("%f", &v_p5);   
+  printf("Quantidade do Produto: ");   
+  scanf("%d", &qtd_p5);   
+  fflush(stdin);      
+  
+  printf("\nNome do Produto: ");   
+  gets(P_6);   
+  printf("Valor do Produto: ");   
+  scanf("%f" , &v_p6);   
+  printf("Quantidade do Produto: ");   
+  scanf("%d", &qtd_p6);   
+  fflush(stdin);      
+  
+  printf("\nNome do Produto: ");   
+  gets(P_7);   
+  printf("Valor do Produto: ");   
+  scanf("%f", &v_p7);   
+  printf("Quantidade do produto: ");   
+  scanf("%d", &qtd_p7);   
+  fflush(stdin);      
+  
+  printf("\nNome do Produto: ");   
+  gets(P_8);   
+  printf("Valor do Produto: ");   
+  scanf("%f", &v_p8);   
+  printf("Quantidade do Produto: ");   
+  scanf("%d", &qtd_p8);   
+  fflush(stdin);      
+  
+  total = v_p1*qtd_p1 + v_p2*qtd_p2 + v_p3*qtd_p3 + v_p4*qtd_p4 + v_p5*qtd_p5 + v_p6*qtd_p6 + v_p7*qtd_p7 + v_p8*qtd_p8;
+  
+  system("cls");      
+  
+  printf("|%-7s |%-7s |%-13s |%-10s |%-10s|\n", "Código", "Quant.", "Discriminação", "P. Unitário", "Preço Total");   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo1, qtd_p1, P_1, v_p1, v_p1*qtd_p1);   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo2, qtd_p2, P_2, v_p2, v_p2*qtd_p2);   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo3, qtd_p3, P_3, v_p3, v_p3*qtd_p3);   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo4, qtd_p4, P_4, v_p4, v_p4*qtd_p4);   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo5, qtd_p5, P_5, v_p5, v_p5*qtd_p5);   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo6, qtd_p6, P_6, v_p6, v_p6*qtd_p6);   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo7, qtd_p7, P_7, v_p7, v_p7*qtd_p7);   
+  printf("|%-7d |%-7d |%-13s |R$ %8.2f |R$ %8.2f|\n", codigo8, qtd_p8, P_8, v_p8, v_p8*qtd_p8);   
+  printf("|%-7s |%-7s |%-13s |%-12s|R$ %8.2f|\n", "", "", "", "Total", total);    
+  
+  system("pause");   
+  return 0; 
+}
